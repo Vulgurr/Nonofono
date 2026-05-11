@@ -7,7 +7,8 @@ test/README
 # --- Archivos de configuración local (VS Code) ---
 .vscode/.browse.c_cpp.db*
 .vscode/.gcc_flags.json
-.vscode/.c_cpp_properties.json
+.vscode/c_cpp_properties.json
+.vscode/launch.json
 .vscode/.clang_format
 .vscode/.exe_target_json
 .vscode/ipch/
