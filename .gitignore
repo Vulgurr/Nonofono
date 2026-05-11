@@ -5,6 +5,7 @@ lib/README
 test/README
 
 # --- Archivos de configuración local (VS Code) ---
+.vscode/
 .vscode/.browse.c_cpp.db*
 .vscode/.gcc_flags.json
 .vscode/c_cpp_properties.json
