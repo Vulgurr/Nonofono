@@ -64,8 +64,8 @@
     {
       "type": "chip-inmp441",
       "id": "chip1",
-      "top": 116.58,
-      "left": 247,
+      "top": 240,
+      "left": 249.6,
       "rotate": 180,
       "attrs": {}
     },
@@ -123,8 +123,8 @@
     {
       "type": "wokwi-text",
       "id": "text6",
-      "top": 220.8,
-      "left": 729.6,
+      "top": 211.2,
+      "left": 844.8,
       "attrs": { "text": "Emergencias\n" }
     },
     {
@@ -158,7 +158,7 @@
       "left": 504.8,
       "attrs": { "pins": "i2c" }
     },
-    { "type": "wokwi-potentiometer", "id": "pot1", "top": -202.9, "left": 28.6, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 113.9, "left": 134.2, "attrs": {} },
     {
       "type": "wokwi-led",
       "id": "led1",
@@ -182,19 +182,13 @@
       "left": 433.8,
       "attrs": { "volume": "0.1" }
     },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": 113.9, "left": 259, "attrs": {} },
     {
       "type": "wokwi-text",
-      "id": "text7",
-      "top": -412.8,
-      "left": 316.8,
-      "attrs": { "text": "Ver bien como conectar el buzzer\n" }
-    },
-    {
-      "type": "wokwi-text",
-      "id": "text8",
-      "top": 259.2,
-      "left": 643.2,
-      "attrs": { "text": "Estos dos si pueden usar la R interna del ESP32" }
+      "id": "text9",
+      "top": 201.6,
+      "left": 249.6,
+      "attrs": { "text": "Micrófono falso" }
     }
   ],
   "connections": [
@@ -249,15 +243,18 @@
     [ "lcd1:GND", "bb1:tn.17", "black", [ "h0" ] ],
     [ "lcd1:SDA", "esp:D21", "violet", [ "h0" ] ],
     [ "lcd1:SCL", "esp:D22", "violet", [ "h0" ] ],
-    [ "pot1:VCC", "bb1:tp.2", "red", [ "v0", "h172", "v19.2" ] ],
-    [ "pot1:GND", "bb1:tn.2", "black", [ "v9.6", "h182.4" ] ],
-    [ "esp:D33", "pot1:SIG", "green", [ "v-19.2", "h-28.4" ] ],
+    [ "esp:D33", "pot1:SIG", "green", [ "v-19.2", "h-124.8", "v288", "h202" ] ],
     [ "esp:D27", "bb1:20t.a", "limegreen", [ "v0" ] ],
     [ "r5:2", "bb1:24t.d", "green", [ "v-30", "h38.4" ] ],
     [ "bb1:25t.d", "bb1:tn.20", "green", [ "v0" ] ],
     [ "esp:D26", "bb1:29t.e", "limegreen", [ "v48", "h412.9" ] ],
     [ "bz1:2", "bb1:29t.a", "red", [ "v0" ] ],
     [ "bz1:1", "bb1:tn.19", "black", [ "v9.6", "h-19.2" ] ],
+    [ "pot2:GND", "bb1:bn.2", "black", [ "v19.2", "h-38.4", "v-105.6", "v-27.5" ] ],
+    [ "pot2:SIG", "bb1:15b.i", "green", [ "v9.6", "h47.6" ] ],
+    [ "pot1:VCC", "bb1:bp.6", "red", [ "v19.2", "h47.2", "v-96", "h67.2" ] ],
+    [ "pot1:GND", "bb1:bn.5", "black", [ "v9.6", "h-48", "v-86.4", "h105.6", "v-9.6", "h57.6" ] ],
+    [ "pot2:VCC", "bb1:bp.13", "red", [ "v19.2", "h-0.8" ] ],
     [ "r1:1", "bb1:23b.g", "", [ "$bb" ] ],
     [ "r1:2", "bb1:bp.18", "", [ "$bb" ] ],
     [ "r2:1", "bb1:30b.g", "", [ "$bb" ] ],

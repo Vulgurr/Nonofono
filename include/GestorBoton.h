@@ -7,7 +7,7 @@ class GestorBoton {
     bool botonEstaPresionado;
 
   public:
-    // Constructor: inicializa el gestor con el pin y el tiempo específico
+    // inicializa el gestor con el pin y el tiempo específico
     GestorBoton(int pinAsignado, unsigned long tiempoAsignado) {
         pin = pinAsignado;
         tiempoRequerido = tiempoAsignado;
@@ -19,16 +19,16 @@ class GestorBoton {
     bool estaMantenido() {
         int lecturaBoton = digitalRead(pin);
 
-        if (lecturaBoton == LOW) { // Asumiendo lógica pull-up (presionado = LOW)
+        if (lecturaBoton == LOW) { 
             if (!botonEstaPresionado) {
-                // Se acaba de presionar
+
                 botonEstaPresionado = true;
                 tiempoInicioPresion = millis();
             } else {
                 // Ya estaba presionado, verificamos el cronómetro
                 if (millis() - tiempoInicioPresion >= tiempoRequerido) {
                     botonEstaPresionado = false; // Reiniciamos para evitar múltiples gatillos
-                    return true;                 // ¡Se cumplió el tiempo!
+                    return true;                 
                 }
             }
         } else {
